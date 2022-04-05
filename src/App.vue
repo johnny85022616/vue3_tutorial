@@ -1,15 +1,13 @@
 <template>
-  <myRef></myRef>
+  <myComputed></myComputed>
 </template>
 
 <script>
-// import setUp from "./components/setup.vue"
-import myRef from './components/ref.vue'
-
+import myComputed from './components/computed.vue';
 export default {
   name: 'App',
   components: {
-    myRef
+    myComputed
   }
 }
 </script>
