@@ -1,8 +1,8 @@
 <template>
   <div>{{props.msg}}</div>
 </template>
-<script>
 
+<script>
 export default {
   name:"setupProps",
   props:['msg'], //聲明props
@@ -13,4 +13,8 @@ export default {
     }  
   },
 };
-</script>ii
+</script>
+
+<style lang="scss" scoped>
+
+</style>
