@@ -1,26 +1,28 @@
 <template>
-  <!-- <HelloWorld></HelloWorld>
-  <setUp></setUp>
-  <myRef></myRef>
-  <myReactive></myReactive> -->
-  <setupProps msg="你好呀" school="FJU"></setupProps>
+  <!-- <setUp></setUp> -->
+  <!-- <myRef></myRef> -->
+  <myReactive></myReactive>
+  <!-- <myComputed></myComputed> -->
+  <!-- <setupProps msg="hello"></setupProps> -->
+  <!-- <contextEmit></contextEmit> -->
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue';
 // import setUp from "./components/setup.vue"
 // import myRef from './components/ref.vue';
-// import myReactive from './components/reactive.vue'
-import setupProps from './components/setup_props.vue';
+import myReactive from './components/reactive.vue'
+// import myComputed from './components/computed.vue';
+// import setupProps from './components/props/props.vue';
+// import contextEmit from './components/context/context.vue';
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld
     // setUp,
     // myRef,
-    // myReactive,
-    setupProps
+    myReactive,
+    // setupProps,
+    // contextEmit
   }
 }
 </script>

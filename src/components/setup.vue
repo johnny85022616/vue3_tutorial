@@ -8,6 +8,7 @@
 export default {
   name:'setUp',
   setup(){
+     console.log("setup ",this);
      let name = "johnny"
      let age = 18  
 
@@ -19,6 +20,12 @@ export default {
        age , 
        sayHello
      }
+  },
+  beforeCreate() {
+    console.log('beforeCreate' , this);
+  },
+  created(){
+    console.log('created' , this);
   }
 }
 </script>

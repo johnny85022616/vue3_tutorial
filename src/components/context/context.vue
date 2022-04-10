@@ -1,6 +1,7 @@
 <template>
     <h1>Context</h1>
     <contextEmit @hello='showHellowmsg'></contextEmit>
+    <br>
     <contextSlot>
       <template v-slot:slot1>
         <span>這是填入的內容</span>
