@@ -7,13 +7,7 @@
 export default {
   name:"contextSlot",
   setup(props,context) { //接收props
-    console.log(context);
-    const handleEmit = ()=>{
-        context.emit('hello' , 'hello')  //觸發父類別自定義事件
-    }
-    return {
-      handleEmit
-    }  
+    console.log(context.slots);
   },
 };
 </script>
