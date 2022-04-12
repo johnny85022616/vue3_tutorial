@@ -1,5 +1,5 @@
 <template>
-  <setUp></setUp>
+  <!-- <setUp></setUp> -->
   <!-- <myRef></myRef> -->
   <!-- <myReactive></myReactive> -->
   <!-- <myComputed></myComputed> -->
@@ -7,10 +7,11 @@
   <!-- <setupContext></setupContext> -->
   <!-- <customHooks></customHooks> -->
   <!-- <toRefs></toRefs> -->
+  <myWatch></myWatch>
 </template>
 
 <script>
-import setUp from "./components/setup.vue"
+// import setUp from "./components/setup.vue"
 // import myRef from './components/ref.vue';
 // import myReactive from './components/reactive.vue'
 // import myComputed from './components/computed.vue';
@@ -18,17 +19,19 @@ import setUp from "./components/setup.vue"
 // import setupContext from './components/context/context.vue';
 // import customHooks from './components/customHooks.vue';
 // import toRefs from './components/toRefs.vue';
+import myWatch from './components/watch.vue';
 
 export default {
   name: 'App',
   components: {
-    setUp,
+    // setUp,
     // myRef,
     // myReactive,
     // setupProps,
     // setupContext
     // customHooks,
     // toRefs
+    myWatch
   }
 }
 </script>
