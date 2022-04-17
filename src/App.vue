@@ -7,7 +7,9 @@
   <!-- <setupContext></setupContext> -->
   <!-- <customHooks></customHooks> -->
   <!-- <toRefs></toRefs> -->
-  <myWatch></myWatch>
+  <!-- <myWatch></myWatch> -->
+  <!-- <watchEffect></watchEffect> -->
+  <shallowReactiveShallowRef></shallowReactiveShallowRef>
 </template>
 
 <script>
@@ -19,19 +21,23 @@
 // import setupContext from './components/context/context.vue';
 // import customHooks from './components/customHooks.vue';
 // import toRefs from './components/toRefs.vue';
-import myWatch from './components/watch.vue';
-
+// import myWatch from './components/watch.vue';
+// import watchEffect from './components/watchEffect.vue';
+import shallowReactiveShallowRef from './components/shallowReactive&shallowRef.vue';
 export default {
   name: 'App',
   components: {
     // setUp,
     // myRef,
     // myReactive,
+    // myComputed
     // setupProps,
     // setupContext
     // customHooks,
     // toRefs
-    myWatch
+    // myWatch
+    // watchEffect
+    shallowReactiveShallowRef
   }
 }
 </script>
