@@ -13,7 +13,7 @@
   <button @click="person.job.j1.salary++">加薪</button>
 </template>
 <script>
-import {shallowReactive, shallowRef } from "@vue/reactivity";
+import {reactive, shallowReactive, shallowRef } from "@vue/reactivity";
 
 export default {
   name: "shallowReactiveShallowRef",
@@ -23,6 +23,14 @@ export default {
       a:0
     });
     console.log(count);
+
+    let obj = reactive({
+      x:1
+    })
+    console.log(obj);
+
+    let arr = reactive([1,2,3,4,5])
+    console.log(arr);
 
     let person = shallowReactive({  //只考慮第一層數據的響應式
       name: "張三",

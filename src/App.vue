@@ -9,12 +9,13 @@
   <!-- <toRefs></toRefs> -->
   <!-- <myWatch></myWatch> -->
   <!-- <watchEffect></watchEffect> -->
-  <shallowReactiveShallowRef></shallowReactiveShallowRef>
+  <!-- <shallowReactiveShallowRef></shallowReactiveShallowRef> -->
+  <lifeCycle></lifeCycle>
 </template>
 
 <script>
 // import setUp from "./components/setup.vue"
-// import myRef from './components/ref.vue';
+// import myRef from './components/ref.vue'; 
 // import myReactive from './components/reactive.vue'
 // import myComputed from './components/computed.vue';
 // import setupProps from './components/props/props.vue';
@@ -23,7 +24,8 @@
 // import toRefs from './components/toRefs.vue';
 // import myWatch from './components/watch.vue';
 // import watchEffect from './components/watchEffect.vue';
-import shallowReactiveShallowRef from './components/shallowReactive&shallowRef.vue';
+// import shallowReactiveShallowRef from './components/shallowReactive&shallowRef.vue';
+import lifeCycle from './components/lifeCycle/lifeCycle.vue';
 export default {
   name: 'App',
   components: {
@@ -37,7 +39,8 @@ export default {
     // toRefs
     // myWatch
     // watchEffect
-    shallowReactiveShallowRef
+    // shallowReactiveShallowRef,
+    lifeCycle
   }
 }
 </script>
