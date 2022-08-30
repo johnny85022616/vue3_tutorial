@@ -10,7 +10,8 @@
   <!-- <myWatch></myWatch> -->
   <!-- <watchEffect></watchEffect> -->
   <!-- <shallowReactiveShallowRef></shallowReactiveShallowRef> -->
-  <lifeCycle></lifeCycle>
+  <!-- <lifeCycle></lifeCycle> -->
+  <readOnlyShallowReadOnly></readOnlyShallowReadOnly>
 </template>
 
 <script>
@@ -25,7 +26,8 @@
 // import myWatch from './components/watch.vue';
 // import watchEffect from './components/watchEffect.vue';
 // import shallowReactiveShallowRef from './components/shallowReactive&shallowRef.vue';
-import lifeCycle from './components/lifeCycle/lifeCycle.vue';
+import readOnlyShallowReadOnly from './components/readOnly&shallowReadOnly.vue';
+// import lifeCycle from './components/lifeCycle/lifeCycle.vue';
 export default {
   name: 'App',
   components: {
@@ -40,7 +42,8 @@ export default {
     // myWatch
     // watchEffect
     // shallowReactiveShallowRef,
-    lifeCycle
+    readOnlyShallowReadOnly
+    // lifeCycle
   }
 }
 </script>
