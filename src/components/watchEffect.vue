@@ -1,19 +1,13 @@
 <template>
-  <h1>ref監測</h1>
-  <h2>當前值:{{ count }}</h2>
-  <h2>當前文字:{{ text }}</h2>
-  <button @click="count++">+1</button>
-  <button @click="text+='~'">修改訊息</button>
-  <h1>reactive監測</h1>
-  <h2>名字:{{ person.name }}</h2>
-  <h2>年齡:{{ person.age }}</h2>
-  <h3>薪水:{{ person.job.j1.salary }}k</h3>
-  <button @click="person.name += '~'">修改名字</button>
-  <button @click="person.age++">增長年齡</button>
-  <button @click="person.job.j1.salary++">加薪</button>
+  <h2>名字:{{ name }}</h2>
+  <h2>年齡:{{ age }}</h2>
+  <h3>薪水:{{ job.j1.salary }}k</h3>
+  <button @click="name += '~'">修改名字</button>
+  <button @click="age++">增長年齡</button>
+  <button @click="job.j1.salary++">加薪</button>
 </template>
 <script>
-import { reactive, ref } from "@vue/reactivity";
+import { reactive, ref, toRefs } from "@vue/reactivity";
 import { watchEffect } from '@vue/runtime-core';
 export default {
   name: "watchEffect",
@@ -41,11 +35,12 @@ export default {
     */
     watchEffect(()=>{
       console.log('watchEffect callback被執行!!');
+      console.log(person.job.j1.salary); //若有用到數據則會啟動監聽
     })
     return {
       count,
       text,
-      person,
+      ...toRefs(person)
     };
   },
 };

@@ -1,15 +1,18 @@
 <template>
-<h2>名字:{{ person.name }}</h2>
-  <h2>年齡:{{ person.age }}</h2>
-  <h3>薪水:{{ person.job.j1.salary }}k</h3>
-  <button @click="person.name += '~'">修改名字</button>
-  <button @click="person.age++">增長年齡</button>
-  <button @click="person.job.j1.salary++">加薪</button>
+<h2>名字:{{ name }}</h2>
+  <h2>年齡:{{ age }}</h2>
+  <h3>薪水:{{ job.j1.salary }}k</h3>
+  <button @click="name += '~'">修改名字</button>
+  <button @click="age++">增長年齡</button>
+  <button @click="job.j1.salary++">加薪</button>
 </template>
 
 <script>
-import { reactive , toRefs } from '@vue/reactivity';
+import { reactive , shallowReadonly, toRefs } from '@vue/reactivity';
 
+/*
+  數據不會變更，因此也不會觸發響應式
+*/
 export default {
   setup() {
     let person = reactive({
@@ -23,10 +26,11 @@ export default {
       hobby: ['打球', '玩電腦', '游泳']
     })
 
-    person = toRefs(person);
-    console.log(person);
+    // person = readonly(person)  //不管第一層還是深層都不可更改
+    person = shallowReadonly(person)  //只有第一層不可改
+   
     return {
-      person
+      ...toRefs(person)
     }
   },
 };
