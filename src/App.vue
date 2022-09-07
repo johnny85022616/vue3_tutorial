@@ -8,11 +8,13 @@
   <!-- <customHooks></customHooks> -->
   <!-- <toRefs></toRefs> -->
   <!-- <myWatch></myWatch> -->
-  <watchEffect></watchEffect>
+  <!-- <watchEffect></watchEffect> -->
   <!-- <shallowReactiveShallowRef></shallowReactiveShallowRef> -->
   <!-- <lifeCycle></lifeCycle> -->
   <!-- <readOnlyShallowReadOnly></readOnlyShallowReadOnly> -->
   <!-- <toRawMarkRaw></toRawMarkRaw> -->
+  <!-- <customRef></customRef> -->
+  <provideInject></provideInject>
 </template>
 
 <script>
@@ -25,11 +27,14 @@
 // import customHooks from './components/customHooks.vue';
 // import toRefs from './components/toRefs.vue';
 // import myWatch from './components/watch.vue';
-import watchEffect from './components/watchEffect.vue';
+// import watchEffect from './components/watchEffect.vue';
 // import shallowReactiveShallowRef from './components/shallowReactive&shallowRef.vue';
 // import readOnlyShallowReadOnly from './components/readOnly&shallowReadOnly.vue';
 // import toRawMarkRaw from './components/toRaw&markRaw.vue';
 // import lifeCycle from './components/lifeCycle/lifeCycle.vue';
+// import customRef from './components/customRef.vue';
+import provideInject from './components/provide-inject/provideInject.vue';
+
 export default {
   name: 'App',
   components: {
@@ -42,10 +47,12 @@ export default {
     // customHooks,
     // toRefs
     // myWatch
-    watchEffect
+    // watchEffect
     // shallowReactiveShallowRef,
     // readOnlyShallowReadOnly
-    // toRawMarkRaw
+    // toRawMarkRaw,
+    // customRef, 
+    provideInject
     // lifeCycle
   },
   setup() {
