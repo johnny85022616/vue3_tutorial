@@ -14,7 +14,10 @@
   <!-- <readOnlyShallowReadOnly></readOnlyShallowReadOnly> -->
   <!-- <toRawMarkRaw></toRawMarkRaw> -->
   <!-- <customRef></customRef> -->
-  <provideInject></provideInject>
+  <!-- <provideInject></provideInject> -->
+  <!-- <provideInject></provideInject> -->
+  <!-- <teleportComponent></teleportComponent> -->
+  <suspenseComponent></suspenseComponent>
 </template>
 
 <script>
@@ -33,8 +36,9 @@
 // import toRawMarkRaw from './components/toRaw&markRaw.vue';
 // import lifeCycle from './components/lifeCycle/lifeCycle.vue';
 // import customRef from './components/customRef.vue';
-import provideInject from './components/provide-inject/provideInject.vue';
-
+// import provideInject from './components/provide-inject/provideInject.vue';
+// import teleportComponent from './components/teleport/rootComponent.vue';
+import suspenseComponent from './components/suspense/rootComponent.vue';
 export default {
   name: 'App',
   components: {
@@ -52,7 +56,9 @@ export default {
     // readOnlyShallowReadOnly
     // toRawMarkRaw,
     // customRef, 
-    provideInject
+    // provideInject,
+    // teleportComponent,
+    suspenseComponent
     // lifeCycle
   },
   setup() {
