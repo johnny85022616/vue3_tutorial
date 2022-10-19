@@ -1,29 +1,19 @@
 <template>
     <h1>Context</h1>
-    <contextEmit @hello='showHellowmsg'></contextEmit>
-    <br>
-    <contextSlot>
-      <template v-slot:slot1>
-        <span>這是填入的內容</span>
-      </template>
-    </contextSlot>
+    <ul>
+      <li>
+        <router-link to="/context/emit">emit範例</router-link>
+      </li>
+      <li>
+        <router-link to="/context/slot">slot範例</router-link>
+      </li>
+    </ul>
+  
+    <router-view></router-view>
 </template>
 <script>
-import contextEmit from './emit/emit.vue';
-import contextSlot from './slot/slot.vue';
+
 export default {
   name:"setupContext",
-  components:{
-    contextEmit,
-    contextSlot
-  },
-  setup() { //接收props
-    function showHellowmsg(value){
-      alert(`觸發父組件中方法，並收到${value}信息`)
-    }
-    return {
-      showHellowmsg
-    }
-  },
 };
 </script>

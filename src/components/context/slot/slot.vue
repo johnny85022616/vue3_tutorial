@@ -1,13 +1,19 @@
 <template>
-    Slot區塊
-    <slot name='slot1'></slot>
+  <contextSlot>
+    <template v-slot:slot1>
+      <span>這是填入的內容</span>
+    </template>
+  </contextSlot>
 </template>
 <script>
-
+import contextSlot from '../slot/children.vue';
 export default {
-  name:"contextSlot",
-  setup(props,context) { //接收props
-    console.log(context.slots);
+  name:"slotComponent",
+  components:{
+    contextSlot
+  },
+  setup() {
+   
   },
 };
 </script>

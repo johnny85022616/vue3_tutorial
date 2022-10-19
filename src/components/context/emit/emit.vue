@@ -1,20 +1,21 @@
 <template>
-    Emit 區塊
-    <button @click="handleEmit">觸發父組建自定義事件</button>
+  <contextEmit @hello='showHellowmsg'></contextEmit>
 </template>
-<script>
 
+<script>
+import contextEmit from './children.vue';
 export default {
-  name:"contextEmit",
-  emits:['hello'], //聲明emit 
-  setup(props,context) { 
-    console.log(context);
-    const handleEmit = ()=>{
-        context.emit('hello' , 'hello')  //利用context中emit觸發父類別自定義事件
+  name:"emitComponent",
+  components:{
+    contextEmit
+  },
+  setup() {
+    function showHellowmsg(value){
+      alert(`觸發父組件中方法，並收到${value}信息`)
     }
     return {
-      handleEmit
-    }  
+      showHellowmsg
+    }
   },
 };
 </script>
