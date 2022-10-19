@@ -1,16 +1,15 @@
 <template>
-  <div>{{props.msg}}</div>
+  <setupProps msg="hello"></setupProps>
 </template>
 
 <script>
+import setupProps from '../props/children.vue';
 export default {
-  name:"setupProps",
-  props:['msg'], //聲明props
-  setup(props) { //接收props
-    console.log(props);
-    return {
-        props
-    }  
+  name:"propsComponent",
+  components:{
+    setupProps
+  },
+  setup() { //接收props
   },
 };
 </script>

@@ -1,40 +1,74 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Emit from '../components/context/emit/emit.vue';
-import Slot from '../components/context/slot/slot.vue';
 
 export const routes = [
   {
     path: "/",
-    component: ()=>import(/* webpackChunkName: "Home" */ "../components/Home.vue"),
-    id: 1,
+    component: () =>
+      import(/* webpackChunkName: "Home" */ "../components/Home.vue"),
     name: "home",
   },
   {
     path: "/setup",
     component: () =>
       import(/* webpackChunkName: "Setup" */ "../components/setup.vue"),
-    id: 2,
     name: "setup",
+  },
+  {
+    path: "/props",
+    component: () =>
+      import(
+        /* webpackChunkName: "provide&Inject" */ "../components/props/props.vue"
+      ),
+    name: "props",
+  },
+  {
+    path: "/context",
+    component: () =>
+      import(
+        /* webpackChunkName: "context" */ "../components/context/context.vue"
+      ),
+    name: "context",
+    children: [
+      {
+        path: "emit",
+        component: () =>
+          import(
+            /* webpackChunkName: "emit" */ "../components/context/emit/emit.vue"
+          ),
+      },
+      {
+        path: "slot",
+        component: () =>
+          import(
+            /* webpackChunkName: "slot" */ "../components/context/slot/slot.vue"
+          ),
+      },
+    ],
+  },
+  {
+    path: "/lifeCycle",
+    component: () =>
+      import(
+        /* webpackChunkName: "lifeCycle" */ "../components/lifeCycle/lifeCycle.vue"
+      ),
+    name: "lifeCycle",
   },
   {
     path: "/ref",
     component: () =>
       import(/* webpackChunkName: "Ref" */ "../components/ref.vue"),
-    id: 3,
     name: "ref",
   },
   {
     path: "/reactive",
     component: () =>
       import(/* webpackChunkName: "Reactive" */ "../components/reactive.vue"),
-    id: 4,
     name: "reactive",
   },
   {
     path: "/computed",
     component: () =>
       import(/* webpackChunkName: "Computed" */ "../components/computed.vue"),
-    id: 5,
     name: "computed",
   },
   {
@@ -43,21 +77,18 @@ export const routes = [
       import(
         /* webpackChunkName: "CustomHooks" */ "../components/customHooks.vue"
       ),
-    id: 6,
     name: "customHooks",
   },
   {
     path: "/toRefs",
     component: () =>
       import(/* webpackChunkName: "ToRefs" */ "../components/toRefs.vue"),
-    id: 7,
     name: "toRefs",
   },
   {
     path: "/watch",
     component: () =>
       import(/* webpackChunkName: "Watch" */ "../components/watch.vue"),
-    id: 8,
     name: "watch",
   },
   {
@@ -66,7 +97,6 @@ export const routes = [
       import(
         /* webpackChunkName: "WatchEffect" */ "../components/watchEffect.vue"
       ),
-    id: 9,
     name: "watchEffect",
   },
   {
@@ -75,7 +105,6 @@ export const routes = [
       import(
         /* webpackChunkName: "ShallowReactiveShallowRef" */ "../components/shallowReactive&shallowRef.vue"
       ),
-    id: 10,
     name: "shallowReactive & shallowRef",
   },
   {
@@ -84,8 +113,7 @@ export const routes = [
       import(
         /* webpackChunkName: "readOnly&shallowReadOnly" */ "../components/readOnly&shallowReadOnly.vue"
       ),
-    id: 11,
-    name: "ReadOnly & shallowReadOnly",
+    name: "readOnly & shallowReadOnly",
   },
   {
     path: "/toRaw_markRaw",
@@ -93,14 +121,12 @@ export const routes = [
       import(
         /* webpackChunkName: "ToRaw&markRaw" */ "../components/toRaw&markRaw.vue"
       ),
-    id: 12,
     name: "toRaw & MarkRaw",
   },
   {
     path: "/customRef",
     component: () =>
       import(/* webpackChunkName: "CustomRef" */ "../components/customRef.vue"),
-    id: 13,
     name: "customRef",
   },
   {
@@ -109,32 +135,12 @@ export const routes = [
       import(
         /* webpackChunkName: "provide&Inject" */ "../components/provide-inject/provideInject.vue"
       ),
-    id: 14,
-    name: "Provide & Inject",
-  },
-  {
-    path: "/context",
-    component: ()=>import(
-      /* webpackChunkName: "context" */ "../components/context/context.vue"
-    ),
-    id: 15,
-    name: "context",
-    children: [
-      {
-        path: "emit", 
-        component: Emit,
-      },
-      {
-        path: "slot",
-        component: Slot,
-      },
-    ],
+    name: "provide & inject",
   },
   {
     path: "/test",
     component: () =>
       import(/* webpackChunkName: "Test" */ "../components/test.vue"),
-    id: 14,
     name: "fadeout練習",
   },
 ];

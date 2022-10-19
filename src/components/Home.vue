@@ -1,7 +1,7 @@
 <template>
   <h1>Vue3 練習</h1>
   <ul>
-    <li v-for="item in routerArr" :key="item.key">
+    <li v-for="(item , index) in routerArr" :key="index">
       <router-link :to="item.path">{{item.name}}</router-link>
     </li>
   </ul>
