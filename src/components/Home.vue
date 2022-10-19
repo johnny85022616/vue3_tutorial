@@ -10,8 +10,10 @@
 <script>
 import { ref } from '@vue/reactivity';
 import {routes} from '../router/routes';
+
 export default {
   name:'HomePage',
+
   setup(){
     const routerArr = ref(routes)
 
