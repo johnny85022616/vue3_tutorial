@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "docker": "git pull && npm install && npm run build && docker build -t vue3-docker . && docker-compose -f docker-compose.yml up"
   },
   "dependencies": {
     "core-js": "^3.8.3",
