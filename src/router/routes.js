@@ -138,6 +138,12 @@ export const routes = [
     name: "provide & inject",
   },
   {
+    path: "/scope",
+    component: () =>
+      import(/* webpackChunkName: "Test" */ "../components/style/scope/parent.vue"),
+    name: "scope",
+  },
+  {
     path: "/test",
     component: () =>
       import(/* webpackChunkName: "Test" */ "../components/test.vue"),
