@@ -149,6 +149,18 @@ export const routes = [
       import(/* webpackChunkName: "Test" */ "../components/test.vue"),
     name: "fadeout練習",
   },
+  {
+    path: "/propsTest",
+    component: () =>
+      import(/* webpackChunkName: "Test" */ "../components/testFile/test.vue"),
+    name: "props更新問題",
+  },
+  {
+    path: "/propsTestVue2",
+    component: () =>
+      import(/* webpackChunkName: "Test" */ "../components/testVue2/test.vue"),
+    name: "props更新問題(Vue2版本)",
+  },
 ];
 
 export default createRouter({
