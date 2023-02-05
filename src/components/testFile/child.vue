@@ -1,10 +1,12 @@
 <template>
   <div>
-    {{list}}
+    <h1>Child</h1>
+    <div>{{data}}</div>
+    <div>{{ count }}</div>
   </div>
 </template>
 <script>
-import { reactive } from '@vue/reactivity';
+// import { reactive } from '@vue/reactivity';
 // import { watchEffect } from '@vue/runtime-core';
 
 export default {
@@ -13,18 +15,16 @@ export default {
   props:{
     data:{
       type: Object,
+    },
+    count:{
+      type: Number
     }
   },
   setup(props) {
-    let list = reactive([])
     console.log(props.data);
-
-    // watchEffect(()=>{
-    //   console.log(999);
-    //   list = props.data
-    // })
+    console.log(props.count);
+  
     return {
-      list
     } 
   },
 };
