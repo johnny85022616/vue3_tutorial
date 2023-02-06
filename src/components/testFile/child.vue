@@ -20,9 +20,9 @@ export default {
       type: Number
     }
   },
-  setup(props) {
-    console.log(props.data);
-    console.log(props.count);
+  setup() {
+    // console.log(props.data);
+    // console.log(props.count);
   
     return {
     } 
