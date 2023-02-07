@@ -153,7 +153,7 @@ export const routes = [
     path: "/propsTest",
     component: () =>
       import(/* webpackChunkName: "Test" */ "../components/testFile/test.vue"),
-    name: "props更新問題",
+    name: "reactive重新賦值後的操作及watch監聽",
   },
   {
     path: "/propsTestVue2",

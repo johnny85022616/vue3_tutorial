@@ -39,14 +39,14 @@ export default {
 
     function addAge(){
       
-      // memberList.data = memberList.data.map(ele=>{   //若要遍歷不可用map(因為map中會把ele變為proxy對象，改變原本proxy內結構)
-      //   ele.age += 1
-      //   return ele
-      // })
-
-      memberList.data.forEach((ele , index , array)=>{
-        array[index].age += 1 
+      memberList.data = memberList.data.map(ele=>{   //若要遍歷不可用map(因為map中會把ele變為proxy對象，改變原本proxy內結構)
+        ele.age += 1
+        return ele
       })
+
+      // memberList.data.forEach((ele , index , array)=>{
+      //   array[index].age += 1 
+      // })
       console.log("999",memberList.data);
     }
 
@@ -71,9 +71,9 @@ export default {
    
     }
 
-    watch(memberList.data , (newVal)=>{
+    watch(()=> memberList.data , (newVal)=>{
       console.log('watch',newVal);
-    })
+    },{deep:true})
 
     
     return {
